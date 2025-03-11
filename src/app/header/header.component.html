@@ -1,0 +1,27 @@
+<!-- File: src/app/header/header.component.html -->
+<nav class="navbar">
+  <div class="logo">
+    <h1>Pizza Store</h1>
+  </div>
+  <div class="navigation">
+    <a routerLink="/">Home</a>
+    <a routerLink="/order">Order</a>
+  </div>
+  <div class="filters">
+    <div class="filter-group">
+      <label>Filter by Category:</label>
+      <select [(ngModel)]="selectCat" (change)="filterCat()">
+        <option value="">All</option>
+        <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Sort by:</label>
+      <select [(ngModel)]="selectSort" (change)="sortBy()">
+        <option *ngFor="let sort of sortOptions; index as i" [value]="i">
+          {{ sort.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+</nav>

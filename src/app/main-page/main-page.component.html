@@ -1,0 +1,12 @@
+<!-- File: src/app/main-page/main-page.component.html -->
+<app-header
+  (filterCatChange)="onFilterCatChange($event)"
+  (sortByChange)="onSortByChange($event)"
+></app-header>
+<div class="content">
+  <app-products
+    [filterByCategory]="selectedByCategory"
+    [sortBy]="selectedSortBy"
+  ></app-products>
+</div>
+<app-footer></app-footer>

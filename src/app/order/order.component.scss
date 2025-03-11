@@ -1,0 +1,58 @@
+/* File: src/app/order/order.component.scss */
+.order-container {
+  margin: 80px 20px 60px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    color: #d32f2f;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    }
+
+    button {
+      padding: 10px;
+      background-color: #d32f2f;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #b71c1c;
+      }
+    }
+  }
+
+  .order-message {
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+  }
+}

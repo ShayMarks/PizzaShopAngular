@@ -1,0 +1,16 @@
+<!-- File: src/app/details/details.component.html -->
+<section class="details">
+  <button class="back-button" (click)="goBack()">Back</button>
+  <div class="details-card">
+    <button *ngIf="id > 1" (click)="navigateProduct('prev')">&lt;</button>
+    <div class="item-image">
+      <img [src]="product?.image" alt="{{ product?.title }}" />
+    </div>
+    <div class="item-details">
+      <h2>{{ product?.title }}</h2>
+      <p>{{ product?.description }}</p>
+      <span class="price">{{ product?.price | currency : "USD" }}</span>
+    </div>
+    <button *ngIf="id < maxId" (click)="navigateProduct('next')">&gt;</button>
+  </div>
+</section>
